@@ -1,0 +1,9 @@
+CancelAbandonedOrders:
+  cron: "*/5 * * * *"
+
+queue_documents_for_indexing:
+  every:
+    - "60m"
+  class: "Worker"
+  args:
+  description: "Get the github archives data"
