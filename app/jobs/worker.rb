@@ -15,7 +15,8 @@ class Worker
 		link = "http://data.githubarchive.org/"
 		link.concat(time)
 		link.concat("-12.json.gz")
-		gz = open("http://data.githubarchive.org/2015-01-01-12.json.gz")
+    print link
+		gz = open(link)
   		js = Zlib::GzipReader.new(gz).read
   
   		events = []
